@@ -2,7 +2,7 @@ import EventSummary from "../../components/event-detail/event-summary";
 import EventLogistics from "../../components/event-detail/event-logistics";
 import EventContent from "../../components/event-detail/event-content";
 import { getEventById, getFeaturedEvents } from "../../helpers/api-utils";
-import ErrorAlert from "../../components/ui/error-alert";
+import Comments from "../../components/input/comment";
 import Head from "next/head";
 
 function EventDetail(props) {
@@ -30,6 +30,7 @@ function EventDetail(props) {
       <EventContent>
         <p>{event.description}</p>
       </EventContent>
+      <Comments eventId={event.id} />
     </>
   );
 }
